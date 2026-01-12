@@ -30,5 +30,5 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
-
-  vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+-- shortcuts --
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
