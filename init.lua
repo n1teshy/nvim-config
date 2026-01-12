@@ -32,3 +32,21 @@ vim.diagnostic.config({
 
 -- shortcuts --
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
+-- system clipboard link --
+if vim.fn.executable("wl-copy") == 1 and vim.fn.executable("wl-paste") == 1 then
+  vim.g.clipboard = {
+    name = "wl-clipboard",
+    copy = {
+      ["+"] = "wl-copy",
+      ["*"] = "wl-copy",
+    },
+    paste = {
+      ["+"] = "wl-paste",
+      ["*"] = "wl-paste",
+    },
+    cache_enabled = 0,
+  }
+end
+vim.opt.clipboard = "unnamedplus"
+
